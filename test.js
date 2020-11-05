@@ -1,4 +1,3 @@
-// Setting up canvas
 var canvas = document.getElementById("canvas");
 canvas.width = 900;
 canvas.height = 430;
@@ -6,16 +5,12 @@ var ctx = canvas.getContext('2d');
 let startTime = 0;
 
 class Sorting {
-    
-    // Constructor
     constructor(canvasWidth, canvasHeight) {
         this.canvasWidth = canvasWidth;
         this.canvasHeight = canvasHeight;
         this.squares = new Array(8);
     }
 
-    /////////////////////////// SUPPORTING STRUCTURES ////////////////////////////////
-    
     // ERRORBOX COULD POSSIBLY BE A CLASS, NOT AN OBJECT An object that allows us to
     // display errors
     errorBox = {
@@ -31,9 +26,6 @@ class Sorting {
             this.domElement.innerHTML = message;
         }
     }
-
-    // Action table
-    actionArray = new Array();
 
     // 8 positions on the canvas
     positions = [
@@ -64,8 +56,6 @@ class Sorting {
         }
     ];
 
-    /////////////////////////////// INITIALIZATION ///////////////////////////////////
-
     // Initializes the squares and indexes
     init() {
         for (let i = 0; i < 8; i++) {
@@ -78,14 +68,15 @@ class Sorting {
         // Drawing all the squares and indexes on the canvas
         this.drawSquares();
         this.drawIndexes();
-    }
 
-    ////////////////////////////////// DRAWING ///////////////////////////////////
+    }
 
     // Draws all the squares
     drawSquares() {
-        for (const square of this.squares) {
-            square.draw();
+        for (let i = 0; i < 8; i++) {
+            this
+                .squares[i]
+                .draw();
         }
     }
 
@@ -100,15 +91,12 @@ class Sorting {
 
     // Marks the squares that are currently compared
     mark() {}
-  
-    //Redraws the canvas
-    draw() {
+
+    redraw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         this.drawSquares();
         this.drawIndexes();
     }
-
-    ////////////////////////////////// SORTING ///////////////////////////////////
 
     // Main sort function
     sortx() {
@@ -145,7 +133,6 @@ class Sorting {
         }
 
     }
-
 }
 
 // Class defining the square containing value
@@ -166,7 +153,7 @@ class Square {
     draw(x = this.posX, y = this.posY) {
         if (this.nextX > x) {
             ctx.clearRect(x - 20, y - 10, this.width, this.height + 20);
-        } else if (this.nextX < x) {
+        } else if (this.nextX < x){
             ctx.clearRect(x + 20, y - 10, this.width, this.height + 20);
         }
         ctx.beginPath();
@@ -217,3 +204,32 @@ class Square {
 let sort = new Sorting(900, 430);
 sort.init();
 sort.sortx();
+
+if (i==j)  {
+    say2("");
+     putBoxes(-1, -1);
+     if (j==2)  {
+       say1("The sort is finished.");
+       done = true;
+       tempOn = false;
+       item[1] = 100+item[1];
+     }
+     else {
+       j = j - 1;
+       i = 1;
+       say1("Phase " + (17 - j) + ":  next largest item bubbles up to position " + j);
+     }
+    }
+   else {
+     if (greaterThan(i, i + 1))  {
+       say2("Is item " + i + " bigger than item " + (i + 1) + "?  Yes, so swap them.");
+       swapItems(i, i + 1);
+     }
+     else {
+       say2("Is item " + i + " bigger than item " + (i + 1) + "?  No, so don't swap them.");
+     }
+     i = i + 1;
+     if (i==j)  {
+       actionQueue.push( { action: "finishItem", itemNum: j, delay: 100 } );
+     }
+    } 
