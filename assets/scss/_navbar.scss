@@ -1,0 +1,24 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100vw;
+    padding: 0px 30px;
+    
+
+    &__logo{
+        
+    }
+
+    &__hamburger{
+        cursor: pointer;
+    }
+
+    &__links{
+        display: none;
+        &__link{
+
+        }
+    }
+}

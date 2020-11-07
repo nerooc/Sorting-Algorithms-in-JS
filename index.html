@@ -16,32 +16,100 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet">
-        <!-- import bootstrap -->
     </head>
     <body>
         <!-- Navbar -->
-        <!-- Darkmode button -->
+        <nav class="nav">
+            <img src="./assets/img/logo.png" alt="logo" class="nav__logo">
+            <img src="./assets/img/hamburger.svg" alt="hamburger" class="nav__hamburger">
+            <ul class="nav__links">
+                <li class="nav__link">News</li>
+                <li class="nav__link">Algorithms</li>
+                <li class="nav__link">About</li>
+            </ul>
+        </nav>
 
-        <!-- Container with margin -->
+        <section class="main-content">
+            <header class="header">
+                <h1 class="header__title">Sorting Algorithms in Javascript</h1>
+                <paragraph class="header__desc">Clubhouse is a project made specifically for
+                    Javascript and web developers that want to learn more about sorting algorithms</paragraph>
+                <button class="header__explore">EXPLORE</button>
+                <button class="header__additional">Sign up with Google</button>
+            </header>
 
-        <!-- Sorting algorithm 1 -->
-        <!-- Sorting algorithm 2 -->
-        <!-- Sorting algorithm 3 -->
-        <!-- Sorting algorithm 4 -->
+            <div class="advantages">
+                <div class="advantages__post">
+                    <img
+                        src="./assets/img/blaze-adv.svg"
+                        alt="fast"
+                        class="advantages__post__image">
+                    <h3 class="advantages__post__title">Fastest possible</h3>
+                    <p class="advantages__post__description">Our algorithms are as fast as possible, there is no way someone did it better</p>
+                </div>
+                <div class="advantages__post">
+                    <img
+                        src="./assets/img/block-adv.svg"
+                        alt="easy-and-accessible"
+                        class="advantages__post__image">
+                    <h3 class="advantages__post__title">Easy and accessible</h3>
+                    <p class="advantages__post__description">Each sorting algorithm has a clear
+                        description to help you understand the concept</p>
+                </div>
+                <div class="advantages__post">
+                    <img
+                        src="./assets/img/mobile-adv.svg"
+                        alt="mobile-friendly"
+                        class="advantages__post__image">
+                    <h3 class="advantages__post__title">Mobile friendly</h3>
+                    <p class="advantages__post__description">You can use our website comfortably on
+                        various devices, including phones and tablets</p>
+                </div>
+            </div>
 
-        <!-- Footer -->
+            <video controls></video>
+        </section>
+        
+        <section class="feedback">
+            <img
+                src="./assets/img/face-picture.png"
+                alt="face-picture"
+                class="feedback__image">
+            <h6 class="feedback__name">Talyah Kodumal,
+                <br>
+                CTO and Co-Founder
+                <br>
+                airly</h6>
+            <p class="feedback__quote">“I have learnt so much using this website! I
+                recommend it to everyone that starts their journey with algorithms and web
+                development!”</p>
+        </section>
+
+        <footer class="footer">
+            <img src="./assets/img/footer-logo.png" alt="footer-logo" class="footer__logo">
+            <ul class="footer__links">
+                <li class="footer__link">News</li>
+                <li class="footer__link">Algorithms</li>
+                <li class="footer__link">About</li>
+            </ul>
+            <h5 class="footer__copyright">Copyright © 2020 Tomasz Gajda</h5>
+        </footer>
+
+        <!--
+            SORTING
+
         <div class="wrapper">
             <div class="error" id="errorBox"></div>
             <div class="sorting">
                 <canvas class="sorting__canvas" id="canvas"></canvas>
                 <div class="sorting__controls">
-                    <button class="button start-btn">START</button>
+                    <button class="button start-btn" id="start-btn">START</button>
                     <button disabled class="button pause-btn">PAUSE</button>
                     <div class="error-bin"></div>
                 </div>
             </div>
         </div>
-
         <script src="./script.js"></script>
+    -->
     </body>
 </html>

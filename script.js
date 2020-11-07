@@ -1,12 +1,12 @@
 // Setting up canvas
 var canvas = document.getElementById("canvas");
 canvas.width = 900;
-canvas.height = 430;
+canvas.height = 200;
 var ctx = canvas.getContext('2d');
 let startTime = 0;
 
 class Sorting {
-    
+
     // Constructor
     constructor(canvasWidth, canvasHeight) {
         this.canvasWidth = canvasWidth;
@@ -14,10 +14,9 @@ class Sorting {
         this.squares = new Array(8);
     }
 
-    /////////////////////////// SUPPORTING STRUCTURES ////////////////////////////////
-    
-    // ERRORBOX COULD POSSIBLY BE A CLASS, NOT AN OBJECT An object that allows us to
-    // display errors
+    // ///////////////////////// SUPPORTING STRUCTURES
+    // //////////////////////////////// ERRORBOX COULD POSSIBLY BE A CLASS, NOT AN
+    // OBJECT An object that allows us to display errors
     errorBox = {
         // DOM representation of the object
         domElement: document.getElementById("errorBox"),
@@ -64,9 +63,8 @@ class Sorting {
         }
     ];
 
-    /////////////////////////////// INITIALIZATION ///////////////////////////////////
-
-    // Initializes the squares and indexes
+    // ///////////////////////////// INITIALIZATION
+    // /////////////////////////////////// Initializes the squares and indexes
     init() {
         for (let i = 0; i < 8; i++) {
             this.squares[i] = new Square(Math.floor(Math.random() * (16 - 1)) + 1, this.positions[i].x, this.positions[i].y);
@@ -80,8 +78,7 @@ class Sorting {
         this.drawIndexes();
     }
 
-    ////////////////////////////////// DRAWING ///////////////////////////////////
-
+    // //////////////////////////////// DRAWING ///////////////////////////////////
     // Draws all the squares
     drawSquares() {
         for (const square of this.squares) {
@@ -100,7 +97,7 @@ class Sorting {
 
     // Marks the squares that are currently compared
     mark() {}
-  
+
     //Redraws the canvas
     draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -108,8 +105,7 @@ class Sorting {
         this.drawIndexes();
     }
 
-    ////////////////////////////////// SORTING ///////////////////////////////////
-
+    // //////////////////////////////// SORTING ///////////////////////////////////
     // Main sort function
     sortx() {
 
