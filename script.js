@@ -1,7 +1,7 @@
 // Setting up canvas
 var canvas = document.getElementById("canvas");
 canvas.width = 900;
-canvas.height = 200;
+canvas.height = 430;
 var ctx = canvas.getContext('2d');
 let startTime = 0;
 
