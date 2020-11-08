@@ -1,0 +1,58 @@
+.content {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    color: black;
+    margin-bottom: 50px;
+
+    .advantages {
+        margin: 50px 0;
+        display: flex;
+        flex-flow: column nowrap;
+
+        &__post {
+            display: flex;
+            padding: 20px 0;
+            justify-content: space-between;
+            max-width: 400px;
+
+            &__image {
+                align-self: center;
+                height: 80px;
+                width: 60px;
+                padding: 10px;
+            }
+
+            &__wrapper {
+                display: flex;
+                flex-flow: column nowrap;
+                margin-left: 20px;
+
+                &__title {
+                    font-family: Raleway;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 140%;
+                }
+
+                &__desc {
+                    font-family: Raleway;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 13px;
+                    line-height: 140%;
+                    text-align: justify;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .video {
+        height: 200px;
+        max-width: 500px;
+        border-radius: 15px;
+    }
+
+}

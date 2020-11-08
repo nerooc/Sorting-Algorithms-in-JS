@@ -1,0 +1,41 @@
+@import "./base";
+
+.feedback {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: $base-color;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
+
+    &__image {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 350px;
+        
+        &__name {
+            font-family: "Raleway", sans-serif;
+            font-style: normal;
+            font-size: 17px;
+            font-weight: normal;
+            line-height: 149.9%;
+            color: #FFFFFF;
+            margin: 20px 0;
+        }
+
+        &__quote {
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 180%;
+            text-align: justify;
+            color: #FFFFFF;
+        }
+    }
+}

@@ -1,17 +1,48 @@
+@import "./base";
+
 .header {
-    &__title{
+    margin-top: 100px;
+    display: flex;
+    flex-flow: column;
 
+    &__title {
+        font-family: "Raleway", sans-serif;
+        font-size: 25;
+        font-weight: bold;
     }
 
-    &__desc{
-
+    &__desc {
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 149.9%;
+        margin: 20px 0;
+        color: #989898;
     }
 
-    &__explore{
-
+    &__explore {
+        background-color: $base-color;
+        color: white;
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        border: none;
+        height: 40px;
+        border-radius: 90px;
     }
 
-    &__additional{
-        
+    &__additional {
+        margin-top: 10px;
+        background-color: white;
+        color: black;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        border: none;
+        height: 40px;
+        border-radius: 90px;
+
+        -webkit-box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
+        -moz-box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
+        box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
     }
 }

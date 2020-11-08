@@ -8,6 +8,7 @@ Tech stack:
 - HTML
 - CSS (SCSS)
 - BEM
+- RWD (Mobile first)
 - Javascript (Routing with vanilla JS)
 - Canvas
 

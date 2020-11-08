@@ -1,0 +1,46 @@
+.news{
+    display: flex;
+    flex-flow: column;
+    margin: 30px;
+    align-items: center;
+
+    &__post{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        color: black;
+        font-family: Raleway;
+        margin: 30px 0;
+
+        &__image{
+            width: 100%;
+            max-width: 400px;
+            margin: 0 30px;
+        }
+
+        &__wrapper{
+            margin-top: 30px;
+            max-width: 400px;
+            font-weight: bold;
+            margin: 30px 30px 0 30px;
+
+            &__title{
+                font-size: 25px;
+                line-height: 29px;
+            }
+
+            &__date{
+                font-size: 14px;
+                line-height: 40px;
+            }
+
+            &__desc{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 160%;
+                text-align: justify;
+            }
+        }
+    }
+}

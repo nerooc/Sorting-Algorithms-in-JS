@@ -1,0 +1,44 @@
+.footer {
+    display: flex;
+    flex-flow: column;
+    color: black;
+    align-items: center;
+    margin: 30px 0;
+
+    &__logo {
+        width: 60px;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    &__link {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        margin: 0 10px;
+
+        a{
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    &__copyright {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 50px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #000000;
+    }
+}
