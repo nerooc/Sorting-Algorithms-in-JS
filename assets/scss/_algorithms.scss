@@ -7,6 +7,9 @@
 }
 
 .algorithms {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 
     &__sort {
         margin: 30px;

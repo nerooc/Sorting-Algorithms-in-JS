@@ -1,5 +1,11 @@
 @import "./base";
 
+
+/* MAKE A BUTTON MIXIN */
+@mixin button{
+
+}
+
 .header {
     margin-top: 100px;
     display: flex;
@@ -21,28 +27,86 @@
         color: #989898;
     }
 
-    &__explore {
-        background-color: $base-color;
-        color: white;
-        font-family: "Raleway", sans-serif;
-        font-weight: 500;
-        border: none;
-        height: 40px;
-        border-radius: 90px;
+    &__buttons {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+
+        &__explore {
+            background-color: $base-color;
+            color: white;
+            font-family: "Raleway", sans-serif;
+            font-weight: 500;
+            border: none;
+            height: 40px;
+            border-radius: 90px;
+        }
+
+        &__additional {
+            margin-top: 10px;
+            background-color: white;
+            color: black;
+            font-family: "Raleway", sans-serif;
+            font-weight: bold;
+            border: none;
+            height: 40px;
+            border-radius: 90px;
+
+            -webkit-box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
+            -moz-box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
+            box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
+        }
     }
 
-    &__additional {
-        margin-top: 10px;
-        background-color: white;
-        color: black;
-        font-family: "Raleway", sans-serif;
-        font-weight: bold;
-        border: none;
-        height: 40px;
-        border-radius: 90px;
+}
+@media (min-width: 600px) {
 
-        -webkit-box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
-        -moz-box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
-        box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
+    .header {
+        margin-top: 100px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    
+        &__title {
+            font-family: "Raleway", sans-serif;
+            font-size: 60px;
+            font-weight: bold;
+            width: 550px;
+            text-align: center;
+        }
+    
+        &__desc {
+            display: none;
+        }
+    
+        &__buttons {
+            margin-top: 40px; 
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            width: 600px;
+    
+            &__explore {
+                height: 50px;
+                font-size: 18px;
+                font-weight: 600;
+                border-radius: 90px;
+                width: 100%;
+                max-width: 280px;
+            }
+    
+            &__additional {
+                height: 50px;
+                font-size: 18px;
+                width: 100%;
+                max-width: 280px;
+                margin-top: 0;
+
+                -webkit-box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
+                -moz-box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
+                box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
+            }
+        }
+    
     }
 }

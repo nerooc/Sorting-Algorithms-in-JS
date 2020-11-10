@@ -17,7 +17,7 @@
         display: flex;
         flex-flow: column nowrap;
         max-width: 350px;
-        
+
         &__name {
             font-family: "Raleway", sans-serif;
             font-style: normal;
@@ -29,13 +29,33 @@
         }
 
         &__quote {
-            font-family: Raleway;
+            font-family: "Raleway", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 17px;
             line-height: 180%;
             text-align: justify;
             color: #FFFFFF;
+        }
+    }
+}
+@media (min-width: 800px) {
+    .feedback__wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 350px;
+        margin: 0 50px;
+
+        &__name {
+          
+            font-size: 20px;
+           
+        }
+
+        &__quote {
+        
+            font-size: 18px;
+           
         }
     }
 }
