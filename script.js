@@ -1,3 +1,9 @@
+import Navbar from "./navbar.js";
+
+const nav = new Navbar();
+nav.init();
+
+/*
 // Setting up canvas
 var canvas = document.getElementById("canvas");
 canvas.width = 900;
@@ -213,3 +219,4 @@ class Square {
 let sort = new Sorting(900, 430);
 sort.init();
 sort.sortx();
+*/

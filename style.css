@@ -12,29 +12,46 @@ html, body {
   margin: 0 30px;
 }
 
+.shadow {
+  -webkit-box-shadow: 0 7px 6px -2px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0 7px 6px -2px rgba(0, 0, 0, 0.51);
+  box-shadow: 0 7px 6px -2px rgba(0, 0, 0, 0.51);
+}
+
 .nav {
+  position: fixed;
+  display: flex;
+  background-color: white;
+  width: 100vw;
+  z-index: 999;
+  transition: 0.2s;
+}
+.nav__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   height: 100px;
-  width: 100vw;
-  padding: 0px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  font-family: "Raleway", sans-serif;
 }
-.nav__logo {
+.nav__wrapper__logo {
   width: 120px;
 }
-.nav__hamburger {
+.nav__wrapper__hamburger {
   cursor: pointer;
 }
-.nav__links {
+.nav__wrapper__links {
   display: none;
 }
-.nav__cta {
+.nav__wrapper__cta {
   display: none;
 }
 
 @media (min-width: 800px) {
-  .nav {
+  .nav__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,14 +62,14 @@ html, body {
     padding: 15px 50px;
     font-family: "Raleway", sans-serif;
   }
-  .nav__logo {
+  .nav__wrapper__logo {
     width: 180px;
   }
-  .nav__hamburger {
+  .nav__wrapper__hamburger {
     display: none;
     cursor: pointer;
   }
-  .nav__links {
+  .nav__wrapper__links {
     list-style: none;
     display: flex;
     flex-flow: row nowrap;
@@ -61,7 +78,7 @@ html, body {
     font-size: 18px;
     font-weight: bold;
   }
-  .nav__cta {
+  .nav__wrapper__cta {
     height: 40px;
     width: 180px;
     border-radius: 90px;
@@ -75,7 +92,7 @@ html, body {
     cursor: pointer;
     transition: 0.2s;
   }
-  .nav__cta:hover {
+  .nav__wrapper__cta:hover {
     opacity: 0.7;
   }
 }
@@ -109,7 +126,7 @@ html, body {
 
 /* MAKE A BUTTON MIXIN */
 .header {
-  margin-top: 100px;
+  margin-top: 200px;
   display: flex;
   flex-flow: column;
 }
@@ -157,7 +174,7 @@ html, body {
 
 @media (min-width: 600px) {
   .header {
-    margin-top: 100px;
+    margin-top: 200px;
     display: flex;
     flex-flow: column;
     align-items: center;

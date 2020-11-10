@@ -24,15 +24,17 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="nav">
-            <img src="./assets/img/logo.png" alt="logo" class="nav__logo">
-            <img src="./assets/img/hamburger.svg" alt="hamburger" class="nav__hamburger">
-            <ul class="nav__links">
-                <li class="nav__link">News</li>
-                <li class="nav__link">Algorithms</li>
-                <li class="nav__link">About</li>
-            </ul>
-            <button class="nav__cta">Contact us</button>
+        <nav class="nav" id="navbar">
+            <div class="nav__wrapper">
+                <img src="./assets/img/logo.png" alt="logo" class="nav__wrapper__logo">
+                <img src="./assets/img/hamburger.svg" alt="hamburger" class="nav__wrapper__hamburger">
+                <ul class="nav__wrapper__links">
+                    <li class="nav__wrapper__links__link">News</li>
+                    <li class="nav__wrapper__links__link">Algorithms</li>
+                    <li class="nav__wrapper__links__link">About</li>
+                </ul>
+                <button class="nav__wrapper__cta">Contact us</button>
+            </div>
         </nav>
 
         <!-- ALGORITHMS -->
@@ -91,7 +93,6 @@ let bubbleSort = (inputArr) => {
         </section>
 
         
-        <script src="./script.js"></script>
 -->
         <!-- MAIN PAGE -->
 
@@ -280,6 +281,8 @@ let bubbleSort = (inputArr) => {
             </ul>
             <h5 class="footer__copyright">Copyright © 2020 Tomasz Gajda</h5>
         </footer>
+        
+    <script type="module" src="./script.js"></script>
 
     </body>
 </html>
