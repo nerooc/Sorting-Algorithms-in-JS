@@ -555,7 +555,7 @@ html, body {
 .news {
   display: flex;
   flex-flow: column;
-  margin: 30px;
+  margin: 150px 30px 30px 30px;
   align-items: center;
 }
 .news__post {
