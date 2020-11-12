@@ -6,7 +6,7 @@ export default class Navbar {
     addShadow = (e) => {
         const y = window.scrollY;
 
-        if(y > 20){
+        if (y > 20) {
             this.navbar.className = "nav shadow";
         } else {
             this.navbar.className = "nav";

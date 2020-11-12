@@ -36,7 +36,17 @@
 
         &__links {
             display: none;
-            &__link {}
+            &__link {
+                a {
+                    color: black;
+                    text-decoration: none;
+                    transition: 0.2s;
+
+                    &:hover {
+                        color: $base-color;
+                    }
+                }
+            }
         }
 
         &__cta {

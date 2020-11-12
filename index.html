@@ -4,10 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sorting Algorithms in Javascript</title>
-        
+
         <!-- Favicon -->
         <link rel="icon" href="./assets/img/footer-logo.png">
-
 
         <!-- Our own stylesheet -->
         <link rel="stylesheet" href="./style.css">
@@ -26,263 +25,50 @@
         <!-- Navbar -->
         <nav class="nav" id="navbar">
             <div class="nav__wrapper">
-                <img src="./assets/img/logo.png" alt="logo" class="nav__wrapper__logo">
-                <img src="./assets/img/hamburger.svg" alt="hamburger" class="nav__wrapper__hamburger">
+                <a href="/" id="#routing">
+                    <img src="./assets/img/logo.png" alt="logo" class="nav__wrapper__logo">
+                </a>
+                <img
+                    src="./assets/img/hamburger.svg"
+                    alt="hamburger"
+                    class="nav__wrapper__hamburger">
                 <ul class="nav__wrapper__links">
-                    <li class="nav__wrapper__links__link">News</li>
-                    <li class="nav__wrapper__links__link">Algorithms</li>
-                    <li class="nav__wrapper__links__link">About</li>
+                    <li class="nav__wrapper__links__link">
+                        <a href="/news" id="routing">News</a>
+                    </li>
+                    <li class="nav__wrapper__links__link">
+                        <a href="/algorithms" id="routing">Algorithms</a>
+                    </li>
+                    <li class="nav__wrapper__links__link">
+                        <a href="/about" id="routing">About</a>
+                    </li>
                 </ul>
                 <button class="nav__wrapper__cta">Contact us</button>
             </div>
         </nav>
 
-        <!-- ALGORITHMS -->
-        <section class="algorithms">
-            <div class="algorithms__sort">
-                <h1 class="algorithms__sort__title">Bubble Sort</h1>
-                <p class="algorithms__sort__desc">Bubble Sort is the simplest sorting algorithm
-                    that works by repeatedly swapping the adjacent elements if they are in wrong
-                    order.</p>
+        <!-- PLACEHOLDER -->
+        <div id="placeholder"></div>
 
-                    <div class="algorithms__sort__placeholder">
-                        <div class="algorithms__sort__placeholder__error" id="errorBox"></div>
-                        <div class="algorithms__sort__placeholder__sorting">
-                            <canvas class="algorithms__sort__placeholder__sorting__canvas" id="canvas"></canvas>
-                            <div class="algorithms__sort__placeholder__sorting__controls">
-                                <button class="button start-btn" id="start-btn">START</button>
-                                <button disabled class="button pause-btn">PAUSE</button>
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="algorithms__sort__subtitle">Code</h3>
-
-                <div class="algorithms__sort__wrapper">
-                    <div class="algorithms__sort__wrapper__code">
-let bubbleSort = (inputArr) => {
-    let len = inputArr.length;
-    let swapped;
-    do {
-        swapped = false;
-        for (let i = 0; i < len; i++) {
-            if (inputArr[i] > inputArr[i + 1]) {
-                let tmp = inputArr[i];
-                inputArr[i] = inputArr[i + 1];
-                inputArr[i + 1] = tmp;
-                swapped = true;
-            }
-        }
-    } while (swapped);
-    return inputArr;
-};
-</div>
-                    <p class="algorithms__sort__wrapper__code-desc">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Sed id urna sed tortor dignissim semper. Nulla nec
-                        dapibus urna, a ultrices ante. Etiam purus lorem, placerat vitae hendrerit id,
-                        ultrices sed est. Phasellus scelerisque volutpat consectetur. Praesent blandit
-                        blandit dui sed bibendum. Maecenas vel aliquam eros. Integer fermentum dictum
-                        sapien, vel suscipit tortor blandit sit amet. Donec tincidunt non orci ut
-                        bibendum. Sed porttitor dui dolor, vel ornare nunc malesuada eget. Nunc lobortis
-                        felis id risus vestibulum maximus. Sed lectus lectus, ultrices et convallis in,
-                        consectetur vitae nisi. Mauris non dignissim nulla. Nam et malesuada ex, vel
-                        ultricies sapien. Fusce tristique lectus a nulla maximus bibendum. Fusce egestas
-                        sed urna eu feugiat.</p>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- MAIN PAGE -->
-
-        <!--
-        <section class="main-content">
-            <header class="header">
-                <h1 class="header__title">Sorting Algorithms in Javascript</h1>
-                <paragraph class="header__desc">Clubhouse is a project made specifically for
-                    Javascript and web developers that want to learn more about sorting algorithms</paragraph>
-                <div class = "header__buttons">
-                    <button class="header__buttons__explore">EXPLORE</button>
-                    <button class="header__buttons__additional">Sign up with Google</button>
-                </div>  
-            </header>
-            <div class="content">
-                <div class="advantages">
-                    <div class="advantages__post">
-                        <img
-                            src="./assets/img/blaze-adv.svg"
-                            alt="fast"
-                            class="advantages__post__image">
-                        <div class="advantages__post__wrapper">
-                            <h3 class="advantages__post__wrapper__title">Fastest possible</h3>
-                            <p class="advantages__post__wrapper__desc">Our algorithms are as fast as
-                                possible, there is simply no way someone did it better</p>
-                        </div>
-                    </div>
-                    <div class="advantages__post">
-                        <img
-                            src="./assets/img/block-adv.svg"
-                            alt="easy-and-accessible"
-                            class="advantages__post__image">
-                        <div class="advantages__post__wrapper">
-
-                            <h3 class="advantages__post__wrapper__title">Easy and accessible</h3>
-                            <p class="advantages__post__wrapper__desc">Each sorting algorithm has a clear
-                                description to help you understand the concept</p>
-                        </div>
-
-                    </div>
-                    <div class="advantages__post">
-                        <img
-                            src="./assets/img/mobile-adv.svg"
-                            alt="mobile-friendly"
-                            class="advantages__post__image">
-                        <div class="advantages__post__wrapper">
-
-                            <h3 class="advantages__post__wrapper__title">Mobile friendly</h3>
-                            <p class="advantages__post__wrapper__desc">You can use our website comfortably
-                                on various devices, including phones and tablets</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <video class="video" src="./assets/video/video.mp4" controls></video>
-            </div>
-
-        </section>
-
-        <section class="feedback">
-            <img
-                src="./assets/img/face-picture.png"
-                alt="face-picture"
-                class="feedback__image">
-            <div class="feedback__wrapper">
-                <h6 class="feedback__wrapper__name">
-                    <b>Talyah Kodumal,
-                        <br>
-                        CTO and Co-Founder
-                        <br></b>
-                    airly</h6>
-                <p class="feedback__wrapper__quote">“I have learnt so much using this website! I
-                    recommend it to everyone that starts their journey with algorithms and web
-                    development!”</p>
-            </div>
-
-        </section>
-        -->
-
-        <!-- ABOUT PAGE -->
-
-        <!--
-        <section class="about">
-            <div class="about__wrapper">
-                <h1 class="about__wrapper__title">My name is Thomas...</h1>
-                <p class="about__wrapper__desc">I'm a third year Applied Computer Science
-                    student at the AGH University of Science and Technology in Krakow. I have been
-                    learning Front-End technologies for a year now and this time was just enough to
-                    make sure that this is my place in the industry. <br><br> This website is one of my
-                    university projects, but during the process it turned out to be one of my
-                    favourites. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id urna
-                    sed tortor dignissim semper. Nulla nec dapibus urna, a ultrices ante. Etiam
-                    purus lorem, placerat vitae hendrerit id, ultrices sed est. Phasellus
-                    scelerisque volutpat consectetur. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit.
-                </p>
-            </div>
-            <img src="./assets/img/about-photo.jpg" alt="about-photo" class="about__photo">
-        </section>
-        -->
-
-        <!-- News -->
-
-        <!--
-
-        <section class="news">
-            <div class="news__post">
-                <img
-                    src="./assets/img/news/pc-evening.png"
-                    alt="post-photo"
-                    class="news__post__image">
-                <div class="news__post__wrapper">
-                    <h1 class="news__post__wrapper__title">ES6 for everyone</h1>
-                    <h3 class="news__post__wrapper__date">22 - october - 20</h3>
-                    <p class="news__post__wrapper__desc">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Sed id urna sed tortor dignissim semper. Nulla nec dapibus
-                        urna, a ultrices ante. Etiam purus lorem, placerat vitae hendrerit id, ultrices
-                        sed est. Phasellus scelerisque volutpat consectetur.
-                    </p>
-                </div>
-            </div>
-
-            <div class="news__post">
-                <img
-                    src="./assets/img/news/girl-board.png"
-                    alt="post-photo"
-                    class="news__post__image">
-                <div class="news__post__wrapper">
-                    <h1 class="news__post__wrapper__title">Why algorithms?</h1>
-                    <h3 class="news__post__wrapper__date">20 - october - 20</h3>
-                    <p class="news__post__wrapper__desc">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Sed id urna sed tortor dignissim semper. Nulla nec dapibus
-                        urna, a ultrices ante. Etiam purus lorem, placerat vitae hendrerit id, ultrices
-                        sed est. Phasellus scelerisque volutpat consectetur.
-                    </p>
-                </div>
-            </div>
-
-            <div class="news__post">
-                <img
-                    src="./assets/img/news/vscode-colors.png"
-                    alt="post-photo"
-                    class="news__post__image">
-                <div class="news__post__wrapper">
-                    <h1 class="news__post__wrapper__title">Front-end roadmap</h1>
-                    <h3 class="news__post__wrapper__date">15 - october - 20</h3>
-                    <p class="news__post__wrapper__desc">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Sed id urna sed tortor dignissim semper. Nulla nec dapibus
-                        urna, a ultrices ante. Etiam purus lorem, placerat vitae hendrerit id, ultrices
-                        sed est. Phasellus scelerisque volutpat consectetur.
-                    </p>
-                </div>
-            </div>
-
-            <div class="news__post">
-                <img
-                    src="./assets/img/news/security-js.png"
-                    alt="post-photo"
-                    class="news__post__image">
-                <div class="news__post__wrapper">
-                    <h1 class="news__post__wrapper__title">Security in JS apps</h1>
-                    <h3 class="news__post__wrapper__date">12 - october - 20</h3>
-                    <p class="news__post__wrapper__desc">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Sed id urna sed tortor dignissim semper. Nulla nec dapibus
-                        urna, a ultrices ante. Etiam purus lorem, placerat vitae hendrerit id, ultrices
-                        sed est. Phasellus scelerisque volutpat consectetur.
-                    </p>
-                </div>
-            </div>
-
-        </section>
-
-        -->
-        
         <footer class="footer">
-            <img src="./assets/img/footer-logo.png" alt="footer-logo" class="footer__logo">
+            <a href="/" id="#routing">
+                <img src="./assets/img/footer-logo.png" alt="footer-logo" class="footer__logo">
+            </a>
             <ul class="footer__links">
                 <li class="footer__link">
-                    <a href="#">News</a>
+                    <a href="/news" id="routing">News</a>
                 </li>
                 <li class="footer__link">
-                    <a href="#">Algorithms</a>
+                    <a href="/algorithms" id="routing">Algorithms</a>
                 </li>
                 <li class="footer__link">
-                    <a href="#">About</a>
+                    <a href="/about" id="routing">About</a>
                 </li>
             </ul>
             <h5 class="footer__copyright">Copyright © 2020 Tomasz Gajda</h5>
         </footer>
-        
-    <script type="module" src="./script.js"></script>
+
+        <script type="module" src="./script.js"></script>
 
     </body>
 </html>

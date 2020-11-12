@@ -46,6 +46,14 @@ html, body {
 .nav__wrapper__links {
   display: none;
 }
+.nav__wrapper__links__link a {
+  color: black;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.nav__wrapper__links__link a:hover {
+  color: #3CA89A;
+}
 .nav__wrapper__cta {
   display: none;
 }
