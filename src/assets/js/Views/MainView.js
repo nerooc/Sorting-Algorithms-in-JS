@@ -10,7 +10,7 @@ export default class MainView {
             <paragraph class="header__desc">Clubhouse is a project made specifically for
                 Javascript and web developers that want to learn more about sorting algorithms</paragraph>
             <div class = "header__buttons">
-                <button class="header__buttons__explore">EXPLORE</button>
+                <button class="header__buttons__explore"  onclick="window.open('tomaszgajda.com','_blank');">EXPLORE</button>
                 <button class="header__buttons__additional">Sign up with Google</button>
             </div>  
         </header>

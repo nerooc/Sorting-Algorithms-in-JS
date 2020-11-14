@@ -59,54 +59,22 @@
 }
 @media (min-width: 800px) {
     .content {
-        display: flex;
-        justify-content: center;
         align-items: center;
-        flex-flow: row wrap;
-        color: black;
         margin: 50px auto;
         width: 100%;
         max-width: 1300px;
 
         .advantages {
-            display: flex;
-            flex-flow: column nowrap;
-            margin: 50px 50px;
+            margin: 50px;
 
             &__post {
-                display: flex;
-                padding: 20px 0;
-                justify-content: space-between;
-                max-width: 400px;
-
-                &__image {
-                    align-self: center;
-                    height: 80px;
-                    width: 60px;
-                    padding: 10px;
-                }
-
                 &__wrapper {
-                    display: flex;
-                    flex-flow: column nowrap;
-                    margin-left: 20px;
-
                     &__title {
-                        font-family: Raleway;
-                        font-style: normal;
-                        font-weight: bold;
                         font-size: 25px;
-                        line-height: 140%;
                     }
 
                     &__desc {
-                        font-family: Raleway;
-                        font-style: normal;
-                        font-weight: 600;
                         font-size: 14px;
-                        line-height: 140%;
-                        text-align: justify;
-                        margin-top: 10px;
                     }
                 }
             }
@@ -116,9 +84,7 @@
             height: 100%;
             width: 100%;
             max-width: 600px;
-            border-radius: 15px;
             margin: 0 50px;
         }
-
     }
 }

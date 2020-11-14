@@ -142,3 +142,116 @@
     border: 6px solid #999999;
     background-color: transparent;
 }
+
+
+@media (min-width: 600px) {
+    .algorithms {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 170px auto 100px auto;
+    
+        &__sort {
+            margin: 30px;
+            font-family: Raleway;
+    
+            &__title {
+                font-weight: bold;
+                font-size: 25px;
+                line-height: 29px;
+            }
+    
+            &__desc {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 160%;
+                text-align: justify;
+                margin: 20px 0;
+            }
+    
+            &__placeholder {
+                height: 100%;
+                width: 100%;
+                margin-bottom: 30px;
+    
+                &__error {
+                    display: none;
+                    /*flex when on */
+                    justify-content: center;
+                    align-items: center;
+    
+                    font-size: 16px;
+                    font-family: 'Raleway', sans-serif;
+    
+                    grid-column-start: 2;
+                    grid-column-end: 5;
+                    height: 50px;
+                    background-color: rgb(255, 101, 101);
+                    border: 2px solid rgb(146, 0, 0);
+                    color: rgb(146, 0, 0);
+    
+                    margin-top: 30px;
+                }
+    
+                &__sorting {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    width: 100%;
+    
+                    &__controls {
+                        margin-top: 20px;
+                        display: flex;
+                        width: 500px;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                    }
+    
+                    &__canvas {
+                        border-radius: 20px;
+                        width: 100%;
+                        max-width: 800px;
+                        background-color: #D4FFFA;
+                        border: 6px black solid;
+                    }
+                }
+            }
+    
+            &__subtitle {
+                font-weight: bold;
+                font-size: 25px;
+                line-height: 29px;
+            }
+    
+            &__wrapper {
+                display: flex;
+                flex-flow: row wrap;
+                width: 100%;
+                justify-content: space-between;
+    
+                &__code-desc {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 160%;
+                    text-align: justify;
+                    margin: 30px 0;
+                    max-width: 610px;
+                }
+    
+                &__code {
+                    margin-top: 20px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    white-space: pre-wrap;
+                    border-radius: 20px;
+                    background-color: $secondary-color;
+                    border: 5px solid black;
+                    padding: 20px 40px;
+                }
+            }
+        }
+    }
+
+
+}
