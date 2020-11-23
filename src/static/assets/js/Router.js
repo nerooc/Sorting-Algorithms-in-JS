@@ -13,13 +13,13 @@ export default class Router {
                 path: "/",
                 view: MainView
             }, {
-                path: "/src/about",
+                path: "/about",
                 view: AboutView
             }, {
-                path: "/src/algorithms",
+                path: "/algorithms",
                 view: AlgoView
             }, {
-                path: "/src/news",
+                path: "/news",
                 view: NewsView
             }
         ];
@@ -36,7 +36,6 @@ export default class Router {
         const view = this
             .routes
             .filter(route => {
-                console.log(loc);
                 return route.path == loc;
             })
 

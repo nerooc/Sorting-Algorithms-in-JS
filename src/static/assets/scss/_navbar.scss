@@ -35,19 +35,34 @@
         }
 
         &__links {
-            //position: absolute;
-            //right: 0;
             display: none;
+
             &__link {
                 a {
+                    display: block;
                     color: black;
                     text-decoration: none;
                     transition: 0.2s;
+                    padding: 20px 0;
+                    text-align: center;
+                    border-bottom: 1px solid black;
 
                     &:hover {
                         color: $base-color;
                     }
                 }
+            }
+
+            &--hamburger{
+                display: flex !important;
+                flex-flow: column;
+                position: absolute;
+                z-index: 999;
+                top: 80px;
+                left: 0;
+                list-style: none;
+                width: 100%;
+                background-color: white;
             }
         }
 

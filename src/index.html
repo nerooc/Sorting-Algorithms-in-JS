@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sorting Algorithms in Javascript</title>
-        <script type="module" src="static/script.js"></script>
 
         <!-- Favicon -->
         <link rel="icon" href="./static/assets/img/footer-logo.png">
@@ -32,16 +31,17 @@
                 <img
                     src="./static/assets/img/hamburger.svg"
                     alt="hamburger"
-                    class="nav__wrapper__hamburger">
-                <ul class="nav__wrapper__links">
+                    class="nav__wrapper__hamburger" 
+                    id="hamburger">
+                <ul class="nav__wrapper__links" id="links">
                     <li class="nav__wrapper__links__link">
-                        <a href="/src/news" id="routing">News</a>
+                        <a href="/news" id="routing">News</a>
                     </li>
                     <li class="nav__wrapper__links__link">
-                        <a href="/src/algorithms" id="routing">Algorithms</a>
+                        <a href="/algorithms" id="routing">Algorithms</a>
                     </li>
                     <li class="nav__wrapper__links__link">
-                        <a href="/src/about" id="routing">About</a>
+                        <a href="/about" id="routing">About</a>
                     </li>
                 </ul>
                 <button
@@ -59,18 +59,19 @@
             </a>
             <ul class="footer__links">
                 <li class="footer__link">
-                    <a href="/src/news" id="routing">News</a>
+                    <a href="/news" id="routing">News</a>
                 </li>
                 <li class="footer__link">
-                    <a href="/src/algorithms" id="routing">Algorithms</a>
+                    <a href="/algorithms" id="routing">Algorithms</a>
                 </li>
                 <li class="footer__link">
-                    <a href="/src/about" id="routing">About</a>
+                    <a href="/about" id="routing">About</a>
                 </li>
             </ul>
             <h5 class="footer__copyright">Copyright © 2020 Tomasz Gajda</h5>
         </footer>
 
-
+        <script type="module" src="static/script.js"></script>
+        <script src="static/assets/js/Canvas.js"></script>
     </body>
 </html>
