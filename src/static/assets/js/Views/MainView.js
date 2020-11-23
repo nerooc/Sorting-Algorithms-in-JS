@@ -3,7 +3,7 @@ export default class MainView {
         this.params = params;
     }
 
-    getHtml() {
+    async getHtml() {
         return `<section class="main-content">
         <header class="header">
             <h1 class="header__title">Sorting Algorithms in Javascript</h1>
@@ -18,7 +18,7 @@ export default class MainView {
             <div class="advantages">
                 <div class="advantages__post">
                     <img
-                        src="./assets/img/blaze-adv.svg"
+                        src="./static/assets/img/blaze-adv.svg"
                         alt="fast"
                         class="advantages__post__image">
                     <div class="advantages__post__wrapper">
@@ -29,7 +29,7 @@ export default class MainView {
                 </div>
                 <div class="advantages__post">
                     <img
-                        src="./assets/img/block-adv.svg"
+                        src="./static/assets/img/block-adv.svg"
                         alt="easy-and-accessible"
                         class="advantages__post__image">
                     <div class="advantages__post__wrapper">
@@ -42,7 +42,7 @@ export default class MainView {
                 </div>
                 <div class="advantages__post">
                     <img
-                        src="./assets/img/mobile-adv.svg"
+                        src="./static/assets/img/mobile-adv.svg"
                         alt="mobile-friendly"
                         class="advantages__post__image">
                     <div class="advantages__post__wrapper">
@@ -55,14 +55,14 @@ export default class MainView {
                 </div>
             </div>
 
-            <video class="video" src="./assets/video/video.mp4" controls></video>
+            <video class="video" src="./static/assets/video/video.mp4" controls></video>
         </div>
 
     </section>
 
     <section class="feedback">
         <img
-            src="./assets/img/face-picture.png"
+            src="./static/assets/img/face-picture.png"
             alt="face-picture"
             class="feedback__image">
         <div class="feedback__wrapper">

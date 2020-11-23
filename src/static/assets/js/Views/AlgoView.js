@@ -3,7 +3,7 @@ export default class AlgoView {
         this.params = params;
     }
 
-    getHtml() {
+    async getHtml() {
         return `<section class="algorithms">
         <div class="algorithms__sort">
             <h1 class="algorithms__sort__title">Bubble Sort</h1>

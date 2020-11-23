@@ -13,13 +13,13 @@ export default class Router {
                 path: "/",
                 view: MainView
             }, {
-                path: "/about",
+                path: "/src/about",
                 view: AboutView
             }, {
-                path: "/algorithms",
+                path: "/src/algorithms",
                 view: AlgoView
             }, {
-                path: "/news",
+                path: "/src/news",
                 view: NewsView
             }
         ];
@@ -30,7 +30,7 @@ export default class Router {
         this.route();
     };
 
-    route = () => {
+    route = async () => {
         const loc = location.pathname;
 
         const view = this
@@ -42,7 +42,7 @@ export default class Router {
 
         const viewObj = new view[0].view();
 
-        this.placeholder.innerHTML = viewObj.getHtml();
+        this.placeholder.innerHTML = await viewObj.getHtml();
     }
 
     clickHandler = e => {

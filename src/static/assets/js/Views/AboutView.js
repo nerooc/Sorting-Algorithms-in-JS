@@ -3,7 +3,7 @@ export default class AboutView {
         this.params = params;
     }
 
-    getHtml() {
+    async getHtml() {
         return `<section class="about">
         <div class="about__wrapper">
             <h1 class="about__wrapper__title">My name is Thomas...</h1>
@@ -19,7 +19,7 @@ export default class AboutView {
                 adipiscing elit.
             </p>
         </div>
-        <img src="./assets/img/about-photo.jpg" alt="about-photo" class="about__photo">
+        <img src="../static/assets/img/about-photo.jpg" alt="about-photo" class="about__photo">
     </section>`;
     }
 }

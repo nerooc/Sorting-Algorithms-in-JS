@@ -3,11 +3,11 @@ export default class NewsView {
         this.params = params;
     }
 
-    getHtml() {
+    async getHtml() {
         return `<section class="news">
         <div class="news__post">
             <img
-                src="./assets/img/news/pc-evening.png"
+                src="../static/assets/img/news/pc-evening.png"
                 alt="post-photo"
                 class="news__post__image">
             <div class="news__post__wrapper">
@@ -23,7 +23,7 @@ export default class NewsView {
 
         <div class="news__post">
             <img
-                src="./assets/img/news/girl-board.png"
+                src="../static/assets/img/news/girl-board.png"
                 alt="post-photo"
                 class="news__post__image">
             <div class="news__post__wrapper">
@@ -39,7 +39,7 @@ export default class NewsView {
 
         <div class="news__post">
             <img
-                src="./assets/img/news/vscode-colors.png"
+                src="../static/assets/img/news/vscode-colors.png"
                 alt="post-photo"
                 class="news__post__image">
             <div class="news__post__wrapper">
@@ -55,7 +55,7 @@ export default class NewsView {
 
         <div class="news__post">
             <img
-                src="./assets/img/news/security-js.png"
+                src="../static/assets/img/news/security-js.png"
                 alt="post-photo"
                 class="news__post__image">
             <div class="news__post__wrapper">
