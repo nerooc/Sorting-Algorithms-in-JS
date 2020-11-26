@@ -1,10 +1,10 @@
 export default class AlgoView {
-    constructor(params) {
-        this.params = params;
-    }
+  constructor(params) {
+    this.params = params;
+  }
 
-    async getHtml() {
-        return `<section class="algorithms">
+  async getHtml() {
+    return `<section class="algorithms">
         <div class="algorithms__sort">
             <h1 class="algorithms__sort__title">Bubble Sort</h1>
             <p class="algorithms__sort__desc">Bubble Sort is the simplest sorting algorithm
@@ -14,7 +14,7 @@ export default class AlgoView {
                 <div class="algorithms__sort__placeholder">
                     <div class="algorithms__sort__placeholder__error" id="errorBox"></div>
                     <div class="algorithms__sort__placeholder__sorting">
-                        <canvas class="algorithms__sort__placeholder__sorting__canvas" id="canvas"></canvas>
+                        <div class="algorithms__sort__placeholder__sorting__canvas" id="canvas"></div>
                         <div class="algorithms__sort__placeholder__sorting__controls">
                             <button class="button start-btn" id="start-btn">START</button>
                             <button disabled class="button pause-btn">PAUSE</button>
@@ -25,23 +25,23 @@ export default class AlgoView {
 
             <div class="algorithms__sort__wrapper">
                 <div class="algorithms__sort__wrapper__code">
-let bubbleSort = (inputArr) => {
-let len = inputArr.length;
-let swapped;
-do {
-    swapped = false;
-    for (let i = 0; i < len; i++) {
-        if (inputArr[i] > inputArr[i + 1]) {
-            let tmp = inputArr[i];
-            inputArr[i] = inputArr[i + 1];
-            inputArr[i + 1] = tmp;
-            swapped = true;
+    let bubbleSort = (inputArr) => {
+    let len = inputArr.length;
+    let swapped;
+    do {
+        swapped = false;
+        for (let i = 0; i < len; i++) {
+            if (inputArr[i] > inputArr[i + 1]) {
+                let tmp = inputArr[i];
+                inputArr[i] = inputArr[i + 1];
+                inputArr[i + 1] = tmp;
+                swapped = true;
+            }
         }
-    }
-} while (swapped);
-return inputArr;
-};
-</div>
+    } while (swapped);
+    return inputArr;
+    };
+    </div>
                 <p class="algorithms__sort__wrapper__code-desc">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit. Sed id urna sed tortor dignissim semper. Nulla nec
                     dapibus urna, a ultrices ante. Etiam purus lorem, placerat vitae hendrerit id,
@@ -56,5 +56,5 @@ return inputArr;
             </div>
         </div>
     </section>`;
-    }
+  }
 }
