@@ -2,7 +2,7 @@
 
 Project 1, created for the "Web Technologies" classes
 
-### [OPEN DEMO](to be added)
+### [OPEN DEMO](https://sor-al.netlify.app/)
 
 Tech stack:
 - HTML
@@ -10,8 +10,6 @@ Tech stack:
 - BEM
 - RWD (Mobile first)
 - Javascript (Routing with vanilla JS)
-- Canvas
-- Webpack (Bundling)
 
 |![alt text](https://github.com/nerooc/Sorting-Algorithms-in-JS/blob/main/src/static/assets/img/preview.png)
 |-
