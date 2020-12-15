@@ -1,101 +1,96 @@
-@import "./base";
+@import './base';
 
-
-@mixin button{
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    border: none;
-    height: 40px;
-    border-radius: 90px;
+@mixin button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  border: none;
+  height: 40px;
+  border-radius: 90px;
 }
 
-@mixin button-desktop{
-    height: 50px;
-    font-size: 18px;
-    width: 100%;
-    max-width: 280px;
+@mixin button-desktop {
+  height: 50px;
+  font-size: 18px;
+  width: 100%;
+  max-width: 280px;
 }
 
 .header {
-    margin-top: 200px;
+  margin-top: 200px;
+  display: flex;
+  flex-flow: column;
+
+  &__title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  &__desc {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 149.9%;
+    margin: 20px 0;
+    color: #989898;
+  }
+
+  &__buttons {
     display: flex;
     flex-flow: column;
+    width: 100%;
+
+    &__explore {
+      @include button;
+      background-color: $base-color;
+      color: white;
+    }
+
+    &__additional {
+      @include button;
+      margin-top: 10px;
+      background-color: white;
+      color: black;
+
+      -webkit-box-shadow: 0 0 7px 3px rgba(145, 145, 145, 0.37);
+      -moz-box-shadow: 0 0 7px 3px rgba(145, 145, 145, 0.37);
+      box-shadow: 0 0 7px 3px rgba(145, 145, 145, 0.37);
+    }
+  }
+}
+@media (min-width: 600px) {
+  .header {
+    align-items: center;
 
     &__title {
-        font-family: "Raleway", sans-serif;
-        font-size: 25;
-        font-weight: bold;
+      font-size: 60px;
+      width: 550px;
+      text-align: center;
     }
 
     &__desc {
-        font-family: "Raleway", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 149.9%;
-        margin: 20px 0;
-        color: #989898;
+      display: none;
     }
 
     &__buttons {
-        display: flex;
-        flex-flow: column;
-        width: 100%;
+      margin-top: 40px;
+      flex-flow: row;
+      justify-content: space-between;
+      width: 600px;
 
-        &__explore {
-            @include button;
-            background-color: $base-color;
-            color: white;
-            
+      &__explore {
+        @include button-desktop;
+        &:hover {
+          opacity: 0.7;
+          cursor: pointer;
         }
+      }
 
-        &__additional {
-            @include button;
-            margin-top: 10px;
-            background-color: white;
-            color: black;
-
-            -webkit-box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
-            -moz-box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
-            box-shadow: 0 0 7px 3px rgba(145,145,145,0.37);
-        }
+      &__additional {
+        @include button-desktop;
+        margin-top: 0;
+      }
     }
-
-}
-@media (min-width: 600px) {
-
-    .header {
-        align-items: center;
-    
-        &__title {
-            font-size: 60px;
-            width: 550px;
-            text-align: center;
-        }
-    
-        &__desc {
-            display: none;
-        }
-    
-        &__buttons {
-            margin-top: 40px; 
-            flex-flow: row;
-            justify-content: space-between;
-            width: 600px;
-    
-            &__explore {
-                @include button-desktop;
-                &:hover {
-                    opacity: 0.7;
-                    cursor: pointer;
-                }
-            }
-    
-            &__additional {
-                @include button-desktop;
-                margin-top: 0;
-            }
-        }
-    
-    }
+  }
 }

@@ -1,10 +1,10 @@
 export default class AboutView {
-    constructor(params) {
-        this.params = params;
-    }
+  constructor(params) {
+    this.params = params;
+  }
 
-    async getHtml() {
-        return `<section class="about">
+  getHtml() {
+    return `<section class="about">
         <div class="about__wrapper">
             <h1 class="about__wrapper__title">My name is Thomas...</h1>
             <p class="about__wrapper__desc">I'm a third year Applied Computer Science
@@ -21,5 +21,5 @@ export default class AboutView {
         </div>
         <img src="../static/assets/img/about-photo.jpg" alt="about-photo" class="about__photo">
     </section>`;
-    }
+  }
 }

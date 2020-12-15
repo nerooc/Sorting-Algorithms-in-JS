@@ -1,10 +1,10 @@
 export default class NewsView {
-    constructor(params) {
-        this.params = params;
-    }
+  constructor(params) {
+    this.params = params;
+  }
 
-    async getHtml() {
-        return `<section class="news">
+  getHtml() {
+    return `<section class="news">
         <div class="news__post">
             <img
                 src="../static/assets/img/news/pc-evening.png"
@@ -71,5 +71,5 @@ export default class NewsView {
 
     </section>
 `;
-    }
+  }
 }

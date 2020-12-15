@@ -2,12 +2,13 @@ import MainView from './Views/MainView.js';
 import AlgoView from './Views/AlgoView.js';
 import NewsView from './Views/NewsView.js';
 import AboutView from './Views/AboutView.js';
+import ErrorView from './Views/ErrorView.js';
 
 export default class Router {
   constructor() {
     // We create an array from the navigation buttons
     this.placeholder = document.getElementById('placeholder');
-    this.routeBtns = Array.from(document.querySelectorAll('#routing'));
+    this.routeBtns = Array.from(document.querySelectorAll('.routing'));
     this.routes = [
       {
         path: '/',
@@ -33,16 +34,22 @@ export default class Router {
     this.route();
   };
 
-  route = async () => {
+  route = () => {
     const loc = location.pathname;
 
-    const view = this.routes.filter((route) => {
+    const [route] = this.routes.filter((route) => {
       return route.path == loc;
     });
 
-    const viewObj = new view[0].view();
+    if (!route) {
+      const viewObj = new ErrorView();
+      this.placeholder.innerHTML = viewObj.getHtml();
+      return;
+    }
 
-    this.placeholder.innerHTML = await viewObj.getHtml();
+    const viewObj = new route.view();
+
+    this.placeholder.innerHTML = viewObj.getHtml();
   };
 
   clickHandler = (e) => {

@@ -99,6 +99,7 @@
       }
 
       &__code {
+        height: 350px;
         margin-top: 20px;
         font-size: 15px;
         font-weight: bold;
@@ -122,6 +123,8 @@
   font-weight: bold;
   font-size: 22px;
   line-height: 25px;
+  transition: 0.2s;
+
   cursor: pointer;
   &:disabled {
     cursor: unset;
@@ -133,16 +136,21 @@
   border: 6px solid #43b9aa;
   background-color: transparent;
   transition: 0.2s;
-  &:hover {
+  &:hover:enabled {
     background-color: #43b9aa;
+  }
+  &:disabled {
+    border: 6px solid gray;
   }
 }
 
-.pause-btn {
+.reload-btn {
   @include button;
-  color: #999999;
-  border: 6px solid #999999;
+  border: 6px solid #43b9aa;
   background-color: transparent;
+  &:hover {
+    background-color: #43b9aa;
+  }
 }
 
 @media (min-width: 600px) {

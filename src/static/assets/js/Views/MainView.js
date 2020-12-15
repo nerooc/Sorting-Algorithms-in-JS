@@ -1,16 +1,16 @@
 export default class MainView {
-    constructor(params) {
-        this.params = params;
-    }
+  constructor(params) {
+    this.params = params;
+  }
 
-    async getHtml() {
-        return `<section class="main-content">
+  getHtml() {
+    return `<section class="main-content">
         <header class="header">
             <h1 class="header__title">Sorting Algorithms in Javascript</h1>
             <paragraph class="header__desc">Clubhouse is a project made specifically for
                 Javascript and web developers that want to learn more about sorting algorithms</paragraph>
             <div class = "header__buttons">
-                <button class="header__buttons__explore"  onclick="window.open('tomaszgajda.com','_blank');">EXPLORE</button>
+                <button class="header__buttons__explore"  onclick="window.open('https://tomaszgajda.com/','_blank');">EXPLORE</button>
                 <button class="header__buttons__additional">Sign up with Google</button>
             </div>  
         </header>
@@ -55,7 +55,7 @@ export default class MainView {
                 </div>
             </div>
 
-            <video class="video" src="./static/assets/video/video.mp4" controls></video>
+            <video class="video" src="./static/assets/video/bubble.mp4" autoplay loop muted controls></video>
         </div>
 
     </section>
@@ -78,5 +78,5 @@ export default class MainView {
         </div>
 
     </section>`;
-    }
+  }
 }
