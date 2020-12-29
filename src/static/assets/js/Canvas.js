@@ -50,7 +50,7 @@ waitForElementToDisplay(
         const value = Math.floor(Math.random() * 100);
 
         // Tworzymy blok
-        const block = document.createElement('div');
+        const block = document.createElement('svg');
 
         // Nadajemy mu klasę
         block.classList.add('block');

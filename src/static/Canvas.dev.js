@@ -43,7 +43,7 @@ waitForElementToDisplay('#canvas', function () {
       // Losujemy wartość bloku
       var value = Math.floor(Math.random() * 100); // Tworzymy blok
 
-      var block = document.createElement('div'); // Nadajemy mu klasę
+      var block = document.createElement('svg'); // Nadajemy mu klasę
 
       block.classList.add('block'); // Ustawiamy go w odpowiednim miejscu i dajemy odpowiednią wysokość
 
