@@ -1,3 +1,5 @@
+/* PLIK NIE JEST JUZ POTRZEBNY, NETLIFY OBSLUGUJE SCIEZKI */
+
 const express = require('express');
 const app = express();
 const path = require('path');

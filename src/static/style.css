@@ -13,6 +13,10 @@ body {
   margin: 0 30px;
 }
 
+*:focus {
+  outline: none;
+}
+
 .shadow {
   -webkit-box-shadow: 0 7px 6px -2px rgba(0, 0, 0, 0.51);
   -moz-box-shadow: 0 7px 6px -2px rgba(0, 0, 0, 0.51);
@@ -563,6 +567,7 @@ body {
   display: flex;
   flex-flow: column;
   justify-content: center;
+  margin-top: 80px;
 }
 .algorithms__sort {
   margin: 30px;
@@ -630,6 +635,9 @@ body {
 .algorithms__sort__wrapper {
   display: flex;
   flex-flow: row wrap;
+}
+.algorithms__sort__wrapper__h1 {
+  margin-top: 50px;
 }
 .algorithms__sort__wrapper__code-desc {
   font-weight: 500;
@@ -757,7 +765,7 @@ body {
   }
   .algorithms__sort__placeholder__sorting__canvas {
     border-radius: 20px;
-    width: 100%;
+    width: 42vw;
     max-width: 800px;
     background-color: #d4fffa;
     border: 6px black solid;
@@ -823,6 +831,11 @@ body {
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  .block__id {
+    font-size: 13px;
+  }
+}
 .error {
   display: flex;
   flex-flow: column;

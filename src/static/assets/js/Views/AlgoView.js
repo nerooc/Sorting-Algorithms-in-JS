@@ -43,7 +43,7 @@ export default class AlgoView {
     };
     </div> 
             <div>
-                <h1> Wynik fetch'a z WebWorkera:</h1>
+                <h1 class="algorithms__sort__wrapper__h1"> Wynik fetch'a z WebWorkera:</h1>
                 <p class="algorithms__sort__wrapper__code-desc"></p>
             </div>     
             </div>

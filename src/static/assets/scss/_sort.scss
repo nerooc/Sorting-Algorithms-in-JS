@@ -28,3 +28,9 @@
   width: 100%;
   text-align: center;
 }
+
+@media (max-width: 600px) {
+  .block__id {
+    font-size: 13px;
+  }
+}

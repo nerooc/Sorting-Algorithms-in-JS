@@ -10,6 +10,7 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
+  margin-top: 80px;
 
   &__sort {
     margin: 30px;
@@ -88,6 +89,10 @@
     &__wrapper {
       display: flex;
       flex-flow: row wrap;
+
+      &__h1 {
+        margin-top: 50px;
+      }
 
       &__code-desc {
         font-weight: 500;

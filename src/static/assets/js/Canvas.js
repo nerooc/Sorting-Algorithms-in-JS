@@ -58,7 +58,11 @@ waitForElementToDisplay(
         // Ustawiamy go w odpowiednim miejscu i dajemy odpowiednią wysokość
         block.style.height = `${value * 2}px`;
         block.style.left = '2%';
-        block.style.transform = `translateX(${i * 120}%)`;
+
+        window.innerWidth > 800
+          ? (block.style.transform = `translateX(${i * 2}vw)`)
+          : (block.style.transform = `translateX(${i * 4}vw)`);
+        // Próbowałem na wartościach procentowych, natomiast psuło to animację, elementy zaczęły nachodzić na siebie
 
         // Tworzymy opis bloku
         const blockLabel = document.createElement('label');
@@ -105,7 +109,7 @@ waitForElementToDisplay(
       for (let i = 0; i < blocks.length - 1; i += 1) {
         for (let j = 0; j < blocks.length - i - 1; j += 1) {
           // Zamiana kolorów elementów które porównujemy
-          blocks[j].style.backgroundColor = 'red';
+          blocks[j].style.backgroundColor = '#FF4949';
           blocks[j + 1].style.backgroundColor = '#FF4949';
 
           // Opóźnienie
