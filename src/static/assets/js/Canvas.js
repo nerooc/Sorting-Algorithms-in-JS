@@ -157,20 +157,12 @@ waitForElementToDisplay(
       generateBlocks(20);
     });
   },
-  1000,
-  9000
+  1000
 );
 
 // Funkcja, która czeka aż element pojawi się w DOM'ie i wtedy wykonuje przekazany callback
 // Jest to funkcja niezbędna do funkcjonowania aplikacji jako SPA
-function waitForElementToDisplay(
-  selector,
-  callback,
-  checkFrequencyInMs,
-  timeoutInMs
-) {
-  let startTimeInMs = Date.now();
-
+function waitForElementToDisplay(selector, callback, checkFrequencyInMs) {
   // IIFE które poszukuje nasz element
   (function loopSearch() {
     if (document.querySelector(selector) != null) {
@@ -178,7 +170,6 @@ function waitForElementToDisplay(
       return;
     } else {
       setTimeout(function () {
-        if (timeoutInMs && Date.now() - startTimeInMs > timeoutInMs) return;
         loopSearch();
       }, checkFrequencyInMs);
     }
